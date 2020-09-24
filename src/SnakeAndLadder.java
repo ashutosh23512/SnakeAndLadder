@@ -7,6 +7,9 @@ public class SnakeAndLadder {
 		System.out.println("");
 
 		int PlayerPosition1=0;
+		
+		int DiceValue=0;
+		DiceValue=((int)Math.floor(Math.random()*10)%6)+1;
 
 		
 	}
