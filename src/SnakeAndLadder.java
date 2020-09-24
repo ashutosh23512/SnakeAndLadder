@@ -17,11 +17,9 @@ public class SnakeAndLadder {
 		
 		while(PlayerPosition1<100)
 		{
-		
-			
+					
 		DiceValue=((int)Math.floor(Math.random()*10)%6)+1;
 		System.out.println("Player 1 rolled "+DiceValue);
-		
 		int Check=(int)Math.floor(Math.random()*10)%3;
 		if(Check==NoPlay)
 		{
@@ -29,9 +27,17 @@ public class SnakeAndLadder {
 		}
 		else if(Check==Ladder)
 		{
-			System.out.println("Player 1 Move forward by "+DiceValue+" steps");
-		}
 			
+			if(PlayerPosition1+DiceValue>100)
+			{System.out.println("No Move");}
+			else if(PlayerPosition1+DiceValue==100)
+			{System.out.println("Player 1 Won");
+			break;}
+			else {
+			System.out.println("Player 1 Move forward by "+DiceValue+" steps");
+			}
+			
+		}
 		else if(Check==Snake)
 		{
 			if(PlayerPosition1-DiceValue<0)
@@ -41,7 +47,5 @@ public class SnakeAndLadder {
 			}
 			
 		}
-		
-	}
 
-	}}
+	}}}
