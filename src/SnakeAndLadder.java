@@ -6,10 +6,31 @@ public class SnakeAndLadder {
 		System.out.println("Welcome to Snake and Ladder Game");
 		System.out.println("");
 
-		int PlayerPosition1=0;
 		
-		int DiceValue=0;
-		DiceValue=((int)Math.floor(Math.random()*10)%6)+1;
+		
+		
+		int NoPlay=0;
+		int Ladder=1;
+		int Snake=2;
+		
+		int DiceValue=((int)Math.floor(Math.random()*10)%6)+1;
+	
+		System.out.println("Player 1 rolled "+DiceValue);
+		int Check=(int)Math.floor(Math.random()*10)%3;
+		if(Check==NoPlay)
+		
+			System.out.println("Player 1 No Move");
+		
+		else if(Check==Ladder)
+		
+			
+			System.out.println("Player 1 Move forward by "+DiceValue+" steps");
+			
+		
+		else if(Check==Snake)
+			
+			System.out.println("Player 1 Move Back by "+DiceValue+" steps");
+			
 
 		
 	}
